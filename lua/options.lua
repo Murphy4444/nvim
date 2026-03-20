@@ -25,6 +25,10 @@ vim.opt.mouse = 'a'
 vim.opt.ttyfast = true
 vim.opt.swapfile = false
 
+vim.opt.showmode = false
+vim.opt.cmdheight = 1
+vim.opt.laststatus = 3
+
 vim.opt.syntax = "on"
 vim.opt.filetype.on = true
 vim.cmd [[colorscheme sorbet]]
