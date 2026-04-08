@@ -71,27 +71,14 @@ require("lazy").setup({
     },
     { "mason-org/mason.nvim", opts = {} },
     { "neovim/nvim-lspconfig" },
-    {
-        "smoka7/multicursors.nvim",
-
-        event = "VeryLazy",
-        dependencies = {
-            'nvimtools/hydra.nvim',
-        },
-        opts = {}, 
-        cmd = { 'MCStart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
-
-        keys = {
-            {
-                mode = { 'v', 'n' },
-                '<Leader>m',
-                '<cmd>MCstart<cr>',
-                desc = 'Create a selection for selected text or word under the cursor',
-            },
-        },
-
-    },
     { "nvim-tree/nvim-web-devicons", opts = {} },
     { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+    {
+    'nvim-telescope/telescope.nvim', version = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
+}
 })
 

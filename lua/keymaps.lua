@@ -29,3 +29,15 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Hint: start visual mode with the same area as the previous area and the same mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
+
+-------------------
+-- Buffer / Tabs --
+-------------------
+-- buffers
+vim.keymap.set('n', '<S-l>', vim.cmd.bnext)
+vim.keymap.set('n', '<S-h>', vim.cmd.bprevious)
+
+-- tabs
+vim.keymap.set('n', '<leader>l', vim.cmd.tabnext)
+vim.keymap.set('n', '<leader>h', vim.cmd.tabprevious)
+
